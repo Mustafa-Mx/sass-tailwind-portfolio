@@ -1,0 +1,53 @@
+.home {
+    height:100%;
+    padding-top:20vh;
+    overflow:hidden;
+    align-items:center;
+    text-align: center;
+    backdrop-filter: blur(10px);
+
+    .span{
+      border-radius : 30% 70% 70% 30% / 30% 30% 70% 70%;
+      animation: radius 1s infinite;
+      background-image: url(../img/mustafa.jpg);  
+    }
+
+  &-name {
+    font-size:3.9rem;
+    padding-top:1rem;
+    margin-bottom :1rem;
+    border-bottom:2px solid set-text-color($primary-color);;
+    &--last {
+        color:$secondary-color;
+        font-weight: 700;
+    }
+  }
+    
+}
+
+.backbanner{
+  position: absolute;
+  z-index: -1;
+  animation: hue 8s infinite ease-in-out;
+  width: 100vw;
+  height: 100vh;
+}
+
+@keyframes hue{
+  from{
+    filter: hue-rotate(0deg);
+  }
+  to{
+    filter: hue-rotate(360deg);
+  }
+}
+@keyframes radius {
+  from{
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  }
+
+  to{
+    border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
+  }
+  
+}
